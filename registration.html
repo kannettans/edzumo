@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(./hero-bg.png);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .registration-container {
+            display: flex;
+            background-color: transparent;
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+            overflow: hidden;
+            border-radius: 10px;
+            width: 600px;
+        }
+
+        .left-panel, .right-panel {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .left-panel {
+            background-color: transparent;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right-panel {
+            background-color: transparent;
+            color: white;
+        }
+
+        /* Add this style to make input fields appear as a line */
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 0; /* Remove border-radius to make it look like a line */
+            background-color: transparent; /* Make background transparent */
+            outline: none; /* Remove input outline on focus */
+            color: white;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-container">
+        <div class="left-panel">
+            <h2>Personal Information</h2>
+            <form>
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="Pin Number">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Phone Number">
+                <input type="text" placeholder="Post">
+                <label for="course">Select Course:</label>
+                <select id="course" name="course">
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                    <option value="course3">Course 3</option>
+                </select>
+            </form>
+        </div>
+        <div class="right-panel">
+            <h2>Additional Information</h2>
+            <form>
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Address" rows="1"></textarea>
+                <textarea placeholder="Educational Qualifications" rows="1"></textarea>
+                <textarea placeholder="Work Experience" rows="1"></textarea>
+            </form>
+            <button type="submit">Submit</button>
+            <a href="index.html"><button type="submit">Back to Home</button></a>
+        </div>
+    </div>
+
+</body>
+</html>

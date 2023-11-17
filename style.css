@@ -1,0 +1,554 @@
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("./hero-bg.png");
+    position: relative;
+  }
+  
+  #hero .hero-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  #hero .hero-logo {
+    margin-bottom: 30px;
+  }
+  
+  #hero h1 {
+    margin: 0 0 30px 0;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 56px;
+    color: #fff;
+  }
+  
+  #hero h2 {
+    color: #aeaeae;
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  #hero .btn-get-started {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 14px 30px;
+    border: #;
+    border-radius: 30px;
+    margin: 15px;
+    color: #fff;
+    background: #43cc37;
+  }
+  
+  #hero .btn-get-started:hover {
+    transition: 3s;
+    background: #fff;
+    color: #7cc576;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    #hero h2 {
+      line-height: 22px;
+    }
+  }
+  
+  /*________________ Navbar____________________ */
+  .navbar {
+    
+    position: relative;
+    padding-right: 10%;
+    color: rgb(245, 245, 245);
+    padding: 30px 0;
+    text-align: center;    
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* width: 50%; */
+    z-index: 1000;
+  }
+  
+  .navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 20px;
+  }
+  
+  .navbar a:hover {
+    color: #43cc37;
+  }
+  .navbar-item {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: aliceblue;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-item::before,
+.navbar-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(11, 3, 104);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0%;
+    transition: transform 0.3s ease;
+}
+  .navbar-item:hover::before {
+    transform: scaleX(1);
+}
+
+.navbar-item:hover::after {
+    transform: scaleX(1);
+}
+
+  /*__________________________about______________________ us */
+
+#about-us {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+  }
+  
+  #about-us h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  #about-us p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6em;
+    padding-left: 0%;
+  }
+  #aboutli{
+    padding-left: 30%;
+  }
+
+  #about-us img {
+    align-items: center;
+    padding-left: 15%;   
+
+  }
+  
+  /* Scroll animations */
+  .scroll-up {
+    animation: scroll-up 3s ease-in-out;
+  }
+  
+  .scroll-left {
+    animation: scroll-left 3s ease-in-out;
+  }
+  
+  .scroll-right {
+    animation: scroll-right 3s ease-in-out;
+  }
+  
+  @keyframes scroll-up {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scroll-left {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scroll-right {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+    html {
+      scroll-behavior: smooth;
+    }  
+
+    /* ______________________________cources____________________________ */
+
+    .images-container {
+        display: flex;
+    }
+    
+    .image-card {
+        width: 240px;
+        height: 360px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 30px;
+        box-shadow: -26px 6px 20px #03f40f70;
+        transition: .3s linear;
+    }
+    
+    .image-card img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover; /* Adjusted to maintain aspect ratio */
+    }
+    
+    .image-card:not(:first-child) {
+       margin-left: 50px;
+    }
+    
+    .image-card:hover {
+       transform: translateY(-24px);
+    }
+    
+    .image-card:hover ~ .image-card {
+       transform: translateX(60px);
+    }
+    
+    /* for the profile navigation */
+    
+    .navigation {
+        width: 540px;
+        height: 120px;
+        background: #242433;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navigation li {
+        position: relative;
+        list-style: none;
+    }
+    
+    .navigation li::before {
+        content: '';
+        position: absolute;
+        top: 35px;
+        left: 50px;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 5px;
+        background: #222;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+    
+    .navigation li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-decoration: none;
+    }
+    
+    .navigation li a .icon {
+        position: absolute;
+        font-size: 1.75em;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        border-radius: 50px;
+        transition: 0.5s;
+        transition-delay: 0.2s;
+    }
+    .image-card {
+        width: 240px;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 30px;
+        box-shadow: -26px 6px 20px #01020170;
+        transition: .3s linear;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .course{
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* ========================Services Section ========================*/
+#services {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+#services h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.service-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-box i {
+    font-size: 3em;
+    color: #43cc37;
+}
+
+.service-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6em;
+}
+
+/* -------------------------Contact Us Section -------------------------------*/
+#contact {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.split-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.split-left,
+.split-right {
+    width: 48%;
+}
+
+.split-left {
+    text-align: right;
+    padding-right: 50px;
+}
+
+.split-right {
+    text-align: left;
+    padding-left: 50px;
+}
+
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+} */
+
+#contact {
+    background-image: url('./hero-bg.png');
+    padding: 50px 0;
+}
+
+.split-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.split-left,
+.split-right {
+    width: 48%;
+}
+
+.split-left {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.split-right {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.sign-in-container {
+    max-width: 400px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-form label,
+.sign-in-form input,
+.sign-in-form button {
+    margin-bottom: 15px;
+}
+
+
+/* ====================service================== image*/
+.service-image{
+    width: 500px;
+    height: 300px;
+}
+
+/* Add this CSS to your existing styles or create a new stylesheet */
+
+/* Copyright Section */
+#copyright {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    color: #333; /* Text color */
+    font-size: 14px;
+  }
+  
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  right: 0;
+  height: 40px;
+  opacity: 0;
+  transition: bottom ease-in-out 0.4s;
+  background: rgba(124, 197, 118, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .social a i {
+  line-height: 0;
+}
+
+.team .member .social a:hover {
+  color: #fff;
+}
+
+.team .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin: 15px 0 5px 0;
+  font-size: 18px;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #7cc576;
+}
+
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #888888;
+}
+
+.team .member:hover .social {
+  bottom: 0;
+  opacity: 1;
+  transition: bottom ease-in-out 0.4s;
+}
+#table5 {
+  margin: 0 auto; /* Center the table */
+}
+
+.team .member-img {
+  height: 350px; /* Set a fixed height for all images */
+}
+
+.team .member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering the entire container */
+}
